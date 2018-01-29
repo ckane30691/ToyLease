@@ -16,6 +16,11 @@ import {
 const App = () => (
   <div>
     <header>
+      <div className="home-container">
+        <img className="icon" src="https://s3.amazonaws.com/toy-lease/lego-cube-or-square.png"/>
+        <Link to='/' className="header-link"><h1>ToyLease</h1></Link>
+      </div>
+      
 
     </header>
 
