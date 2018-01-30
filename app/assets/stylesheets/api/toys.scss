@@ -1,3 +1,14 @@
 // Place all the styles related to the api/toys controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.toy-image-dropbox {
+  width: 60%;
+  background-color: #fff;
+  height: 200px;
+  border-style: dashed;
+  border-width: 2px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

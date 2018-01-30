@@ -15,8 +15,8 @@
 
 class Toy < ApplicationRecord
   validates :owner_id, :title, :image_url, :title, presence: true
-  validates_uniqueness_of :title, scope: %i(owner_id)
-  validates :room_type, inclusion: {
+  validates_uniqueness_of :title, scope: [:owner_id]
+  validates :toy_type, inclusion: {
     in: ['Stuffed Animal', 'Action Figure', 'Doll', 'Sports', 'Other']
   }
 

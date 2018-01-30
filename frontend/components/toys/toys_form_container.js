@@ -32,6 +32,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 	return {
 		processForm: toy => dispatch(processForm(toy)),
 		fetchToy: id => dispatch(fetchToy(id)),
+    formType
 	};
 };
 

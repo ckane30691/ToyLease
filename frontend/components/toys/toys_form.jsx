@@ -73,16 +73,62 @@ class ToyForm extends React.Component {
   }
 
   render() {
-    const { id, title, about, price, toy_type } = this.state;
+    const title = this.props.toy ? this.state.title : '';
+    const about = this.props.toy ? this.state.about : '';
+    const price = this.props.toy ? this.state.price : '';
+    const toy_type = this.props.toy ? this.state.toy_type : '';
+
+    let formTitle = this.props.formType === 'new' ?
+    "Post a new toy!"
+    : "Edit your toy";
+
     return(
       <div>
-        <h2>Upload an image of your toy</h2>
-        <Dropzone multiple={ false }
-                  accept='image/*'
-                  onDrop={ this.onDrop }
-                  className='lodging-image-dropbox'>
-          <p>Drag and drop an Image of your toy</p>
-        </Dropzone>
+        <h1>{formTitle}</h1>
+        <form className="form-container" onSubmit={this.handleSubmit}>
+          <input required className="toy-title-input" type="text"
+            value={title}
+            onChange={this.update('title')}
+            placeholder="Give your post a title" />
+          <h2>Upload an image of your toy</h2>
+          <Dropzone multiple={ false }
+                    accept='image/*'
+                    onDrop={ this.onDrop }
+                    className='toy-image-dropbox'>
+            <p>Drag and drop an Image of your toy</p>
+          </Dropzone>
+
+          <input required className="toy-price-input" type="number"
+            value={price}
+            min="1"
+            onChange={this.update('price')}
+            placeholder="$" />
+
+
+          <textarea className="toy-about-input" type="text"
+  					value={about ? about : ''}
+  					onChange={this.update('about')}
+  					placeholder="Add extra details..."/>
+
+          <div>
+            <label>What Type of Toy is This?</label>
+            <select defaultValue={ toy_type !== '' ? toy_type : 'Please Select' }
+                    onChange={ this.update('toy_type') }>
+              <option disabled>Please Select</option>
+              <option value='Stuffed Animal'>Stuffed Animal</option>
+              <option value='Action Figure'>Action Figure</option>
+              <option value='Doll'>Doll</option>
+              <option value='Sports'>Sports</option>
+              <option value='Other'>Other</option>
+            </select>
+          </div>
+
+
+
+
+          <input className="toy-submit" type="submit" value="Post toy!" />
+
+        </form>
       </div>
     );
   }
