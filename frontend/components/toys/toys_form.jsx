@@ -79,9 +79,9 @@ class ToyForm extends React.Component {
         <h2>Upload an image of your toy</h2>
         <Dropzone multiple={ false }
                   accept='image/*'
-                  onDrop={ this.onImageDrop }
+                  onDrop={ this.onDrop }
                   className='lodging-image-dropbox'>
-          <p>Drag n drop an Image of your toy</p>
+          <p>Drag and drop an Image of your toy</p>
         </Dropzone>
       </div>
     );
