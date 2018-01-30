@@ -10,11 +10,23 @@ const Splash = () => (
 
     <div className="intro-container">
 
-			<p className="intro-body">
-				Everybody wishes they had more toys and now is your chance to
-        play with every toy without breaking the bank.
-			</p>
     </div>
+
+    <div className="splash-signup">
+				<div className="call-to-action">
+					<h3>Try ToyLease Today: <span id="arrow">⟶</span></h3>
+
+					<ul>
+						<li><span>✓</span>Play with any toy you want for a low price</li>
+						<li><span>✓</span>Get access to toys you otherwise couldn't afford</li>
+						<li><span>✓</span>Make money from your old toys you don't use anymore</li>
+						<li><span>✓</span>Discover new and interesting toys</li>
+						<li><span>✓</span>Meet a user base with similar interests to yours</li>
+					</ul>
+				</div>
+
+				<SessionFormContainer />
+			</div>
   </div>
 );
 

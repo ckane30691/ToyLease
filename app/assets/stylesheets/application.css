@@ -104,3 +104,22 @@
   height: 50px;
   margin-right: 10px;
  }
+
+ .intro-container {
+  
+  color: #283c46;
+  text-align: center;
+}
+
+.intro-body {
+ font-size: 1.0rem;
+ padding-left: 70px;
+ padding-right: 70px;
+}
+
+.splash-signup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 50px;
+}
