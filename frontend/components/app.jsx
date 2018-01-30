@@ -4,7 +4,7 @@ import Splash from './greeting/splash';
 import SessionFormContainer from './session_form/session_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import GreetingContainer from './greeting/greeting_container';
-import ToyIndexContainer from './toys/toy_index_container';
+import ToyIndexContainer from './toys/toys_index_container';
 
 
 import {
