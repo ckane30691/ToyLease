@@ -75,9 +75,13 @@
 
   body {
     font-family: 'Open Sans', sans-serif;
+    color: #283c46;
+    background-color: #f5efe6;
+    padding-bottom: 30px;
   }
 
   header {
+    font-family: 'Ubuntu', sans-serif;
     letter-spacing: -0.05rem;
     display: flex;
     justify-content: space-between;
@@ -94,6 +98,37 @@
     /* margin-bottom: 20px; */
 }
 
+span {
+  color: #ffa500;
+  font-size: 25px;
+  margin-right: 5px;
+}
+
+.login-signup {
+  /* color: #007bb6; */
+  /* text-decoration: underline; */
+  font-size: .75em;
+}
+
+.login-signup a {
+  margin-left: 10px;
+}
+
+.demo-button {
+  background-color: #ffa500;
+  color: #fff;
+  margin-left: 10px;
+  font-size: 0.85em;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.50em 0.8em 0.50em 0.8em;
+  border-radius: 3em;
+  border: 1px solid #bfbfbf;
+  border-bottom-width: 2px;
+  border-color: rgba(0,0,0,0.15);
+  transition: all 0.2s ease;
+}
+
 .home-container {
  display: flex;
  align-items: center;
@@ -106,7 +141,6 @@
  }
 
  .intro-container {
-  
   color: #283c46;
   text-align: center;
 }
@@ -120,6 +154,12 @@
 .splash-signup {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-left: 50px;
+  justify-content: space-around;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-top: 35px;
+}
+
+.call-to-action {
+  margin-top: -30px;
 }

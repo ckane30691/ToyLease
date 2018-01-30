@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 
 const sessionLinks = (dummyLogin) => (
 	<nav className="login-signup">
-		<Link to="/login">Sign In</Link>
+		<Link to="/login">Sign In!</Link>
 		<Link to="/signup">Sign up!</Link>
 		<button className="demo-button" onClick={dummyLogin}>Demo</button>
 	</nav>

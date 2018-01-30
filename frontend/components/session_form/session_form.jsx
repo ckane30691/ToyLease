@@ -55,8 +55,44 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    return <h1>Hooray</h1>;
-  }
+   //Possibly refactor this
+   let text = this.props.formType === 'login' ? 'Log In' : 'Sign Up'
+   let passage = this.props.formType === 'login' ?
+     <p>
+       Just enter your username & password
+       & we'll get you right into ToyLease
+     </p>
+     : <p>
+       Fill out the fields below to sign up
+     </p>
+   return (
+     <div className={`session-${this.props.formType}-container`}>
+       <form onSubmit={this.handleSubmit}
+         className={`session-form-box`}>
+         {passage}
+         <div className="errors">{this.renderErrors()}</div>
+         <div className="session-form">
+           <br />
+             <input required type="text"
+               value={this.state.username}
+               onChange={this.update('username')}
+               className={`session-${this.props.formType}-input`}
+               placeholder="Enter Username" />
+         <br />
+              <input required type="password"
+                value={this.state.password}
+                onChange={this.update('password')}
+                className="password-input"
+                placeholder="Enter Password"
+              />
+            <br/>
+            <input className='signup-submit' type="submit" value={text} />
+         </div>
+       </form>
+     </div>
+   );
+ }
+
 }
 
 export default SessionForm;
