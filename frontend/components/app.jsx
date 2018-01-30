@@ -5,6 +5,7 @@ import SessionFormContainer from './session_form/session_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import GreetingContainer from './greeting/greeting_container';
 import ToyIndexContainer from './toys/toys_index_container';
+import ToyFormContainer from './toys/toys_form_container';
 
 
 import {
@@ -34,6 +35,9 @@ const App = () => (
       <AuthRoute exact path="/login" component={SessionFormContainer} />
       <AuthRoute exact path="/signup" component={() => <div className="solo-signup"><SessionFormContainer /></div>} />
       <ProtectedRoute exact path="/toys" component={ToyIndexContainer} />
+      <ProtectedRoute exact path="/toys/new" component={ToyFormContainer} />
+      <ProtectedRoute exact path="/toys/:toyId/edit" component={ToyFormContainer} />
+
     </Switch>
 </div>
 );
