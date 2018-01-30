@@ -74,20 +74,6 @@ class ToyForm extends React.Component {
 
   render() {
     const { id, title, about, price, toy_type } = this.state;
-
-    if (this.props.currentUser && this.props.owner_id !== this.props.currentUser.id) {
-      return (
-        <div>
-          <div>
-            You don't own this toy!.
-          </div>
-          <button className='button'
-                  onClick={ () => { this.props.history.push('/toys');}}>
-            Return
-          </button>
-        </div>
-      );
-    }
     return(
       <div>
         <h2>Upload an image of your toy</h2>
