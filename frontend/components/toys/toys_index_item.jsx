@@ -12,16 +12,9 @@ const ToyIndexItem = ({ toy }) => {
         </Image>
         <ul>
           <li>{toy.title}</li>
-          <li>${toy.rate} per night</li>
-          <li>{toy.city}</li>
-          <li>{toy.country}</li>
-          <li>{toy.room_type}</li>
+          <li>${toy.price} per night</li>
+          <li>{toy.toy_type}</li>
         </ul>
-        <ReactStars count={ 5 }
-          value={ toy.average_rating }
-          edit={ false }
-          color2='#FC3468'
-          size={ 20 }/>
       </div>
   </Link>
   );
