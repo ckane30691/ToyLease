@@ -19,6 +19,12 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
+  has_many :toys,
+           primary_key: :id,
+           foreign_key: :owner_id,
+           class_name: :Toy,
+           dependent: :destroy
+
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     return nil unless user
