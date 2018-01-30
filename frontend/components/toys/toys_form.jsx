@@ -77,6 +77,7 @@ class ToyForm extends React.Component {
     const about = this.props.toy ? this.state.about : '';
     const price = this.props.toy ? this.state.price : '';
     const toy_type = this.props.toy ? this.state.toy_type : '';
+    const image_url = this.props.toy ? this.state.image_url : '';
 
     let formTitle = this.props.formType === 'new' ?
     "Post a new toy!"
@@ -97,6 +98,7 @@ class ToyForm extends React.Component {
                     className='toy-image-dropbox'>
             <p>Drag and drop an Image of your toy</p>
           </Dropzone>
+          <p>Your current selected image is: {image_url}</p>
 
           <input required className="toy-price-input" type="number"
             value={price}
