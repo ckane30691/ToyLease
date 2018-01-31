@@ -25,6 +25,12 @@ class User < ApplicationRecord
            class_name: :Toy,
            dependent: :destroy
 
+  has_many :leasings,
+          primary_key: :id,
+          foreign_key: :leaser_id,
+          class_name: :Leasing,
+          dependent: :destroy
+
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     return nil unless user

@@ -27,6 +27,12 @@ class Toy < ApplicationRecord
              foreign_key: :owner_id,
              class_name: :User
 
+  has_many :leasings,
+          primary_key: :id,
+          foreign_key: :toy_id,
+          class_name: :Leasing,
+          dependent: :destroy
+
   def ensure_default_image
     self.image_url ||= 'sample.jpg'
   end

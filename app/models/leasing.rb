@@ -56,7 +56,7 @@ class Leasing < ApplicationRecord
   end
 
   def overlapping_leases
-    Lease
+    Leasing
       .where.not(id: self.id)
       .where(toy_id: toy_id)
       .where(<<-SQL, start_date: start_date, end_date: end_date)
