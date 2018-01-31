@@ -7,6 +7,7 @@ import GreetingContainer from './greeting/greeting_container';
 import ToyIndexContainer from './toys/toys_index_container';
 import ToyFormContainer from './toys/toys_form_container';
 import ToyShowContainer from './toys/toys_show_container';
+import LeasingIndexContainer from './leasings/leasing_index_container';
 
 
 import {
@@ -39,6 +40,7 @@ const App = () => (
       <ProtectedRoute exact path="/toys/new" component={ToyFormContainer} />
       <ProtectedRoute exact path="/toys/:toyId/edit" component={ToyFormContainer} />
       <ProtectedRoute exact path="/toys/:toyId" component={ToyShowContainer} />
+      <ProtectedRoute exact path="/leasings" component={LeasingIndexContainer} />
 
     </Switch>
 </div>

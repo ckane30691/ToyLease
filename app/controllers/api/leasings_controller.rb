@@ -1,6 +1,6 @@
 class Api::LeasingsController < ApplicationController
   def index
-    @leasing = current_user.leasings.includes(:toy)
+    @leasings = current_user.leasings.includes(:toy)
     render :index
   end
 
