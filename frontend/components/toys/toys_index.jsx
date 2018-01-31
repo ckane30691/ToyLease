@@ -8,6 +8,7 @@ class ToyIndex extends React.Component {
 	}
 
   render() {
+
     return (
 			<div className="toy-index-body">
 				<div className="toy-index-container">
@@ -18,7 +19,7 @@ class ToyIndex extends React.Component {
 							this.props.toys.map(toy => (
               <div key={toy.id} className='toy-index-card'>
   							<ToyIndexItem
-  								
+                  currentUser={this.props.currentUser}
   								deleteToy={this.props.deleteToy}
   								updateToy={this.props.updateToy}
   								toy={toy}	/>

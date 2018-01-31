@@ -33,22 +33,20 @@ class LeasingForm extends React.Component {
 
   render() {
     return (
-      <div className='leasing-form-container'>
-        <div>
+      <div className='leasing-form-card'>
           <h1>Lease this toy!</h1>
-        </div>
-        <div>
           <h2>Starting from ${this.props.toy.price}</h2>
-        </div>
+
         <div>
 
-          {this.state.success_message}
+          <h2 className="success">{this.state.success_message}</h2>
         </div>
         <form onSubmit={this.handleSubmit}>
           <div className='start-date-container'>
 
-            <label>Start Date</label>
-            <input type='date'
+            <label>Start Date: </label>
+            <input className='date-input'
+              type='date'
               placeholder='Start Date'
               value={this.state.start_date}
               onChange={this.update('start_date')}/>
@@ -56,14 +54,15 @@ class LeasingForm extends React.Component {
           </div>
           <div className='end-date-container'>
 
-            <label>End Date</label>
-            <input type='date'
+            <label>End Date: &nbsp;&nbsp;</label>
+            <input className='date-input'
+              type='date'
               placeholder='End Date'
               value={this.state.end_date}
               onChange={this.update('end_date')}/>
 
           </div>
-          <input className='button'
+          <input className='leasing-submit'
                  type='submit'
                  value='Submit'/>
         </form>

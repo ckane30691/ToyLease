@@ -6,25 +6,30 @@ const LeasingIndexItem = ({ leasing, deleteLeasing }) => {
   const { lease_duration, start_date, end_date, toy,
           total_cost_of_lease} = leasing;
 
-  const {toy_id, title, about, image_url, price } = leasing.toy;
+const startDate = new Date(start_date);
+startDate.setDate(startDate.getDate() + 1);
+const endDate = new Date(end_date);
+endDate.setDate(endDate.getDate() + 1);
+
+  const {id, title, about, image_url, price } = leasing.toy;
 
 	return (
 		<li>
-			<Link className='leasing-title' to={`/toys/${toy_id}`}>
+			<Link className='leasing-link' to={`/toys/${id}`}>
         <Image publicId={ image_url } cloudName='dwuiaymbx'>
         <Transformation height='200' width='200' crop='scale' />
       </Image>
 			</Link>
-      <ul>
-        <li>{ title }</li>
+      <ul className="leasing-attrs">
+        <li className='lease-title'>{ title }</li>
         <li>{ about }</li>
-        <li>From { start_date } to { end_date }</li>
+        <li className='date'>From <span>{ (startDate.getMonth() + 1) + "/" + startDate.getDate()  + "/" + startDate.getFullYear() }</span> to <span>{ (endDate.getMonth() + 1) + "/" + endDate.getDate() + "/" + endDate.getFullYear() }</span></li>
         <li>{ lease_duration } days of playtime!</li>
         <li>${ price } x { lease_duration } = ${ total_cost_of_lease } due</li>
       </ul>
-			<button className="delete-project-btn"
+			<button className="cancel-lease-button"
         onClick={() => deleteLeasing(leasing.id)} >
-        X
+        Cancel Lease
       </button>
 		</li>
 	);

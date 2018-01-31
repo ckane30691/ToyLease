@@ -1,3 +1,103 @@
 // Place all the styles related to the api/leasings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.leasing-index-container {
+  text-align: center;
+}
+
+.leasing-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-left: 90px;
+  padding-right: 90px;
+}
+
+.leasing-index-card {
+  font-size: 1.2em;
+  text-align: left;
+  background-color: #fff;
+  padding: 25px;
+  border: 1px solid #bfbfbf;
+  border-bottom-width: 2px;
+  border-color: rgba(0,0,0,0.15);
+  border-radius: .2em;
+  position: relative;
+  padding-bottom: 60px;
+  margin-bottom: 25px;
+}
+
+.leasing-link img {
+  width: 300px;
+  height: 240px;
+}
+
+.leasing-attrs li {
+  margin-bottom: 5px;
+}
+
+.lease-title {
+  font-size: 1.3em;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.date span {
+  font-size: 1em;
+  color: #6d6d6d;
+}
+
+.cancel-lease-button {
+  color: red;
+  text-decoration: underline;
+  position: absolute;
+  bottom: 20px;
+  left: 120px;
+}
+
+// Below is styling for leasing form
+.leasing-form-card {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: .2em;
+  border: 1px solid #bfbfbf;
+  border-bottom-width: 2px;
+  border-color: rgba(0,0,0,0.15);
+  position: relative;
+  height: 250px;
+}
+
+.leasing-form-card h1 {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.leasing-form-card h2 {
+  margin-top: 10px;
+}
+
+.success {
+  color: green;
+}
+
+.date-input {
+  border: 1px solid #bfbfbf;
+  margin-top: 10px;
+}
+
+.leasing-submit {
+  background-color: rgb(51, 126, 231);
+ 	color: #fff;
+ 	width: 77.3%;
+  text-align: center;
+  height: 25px;
+ 	font-size: .78em;
+ 	font-weight: bold;
+ 	padding: 0.75em 0.75em 0.75em 0.75em;
+ 	border-radius: 0.2em;
+ 	border: 1px solid #bfbfbf;
+ 	border-bottom-width: 2px;
+ 	border-color: rgba(0,0,0,0.15);
+  position: absolute;
+  bottom: 20px;
+}

@@ -18,15 +18,19 @@ class ToyShow extends React.Component {
       toy_type: "",
       created_at: ""
     };
+
+		const edit = this.props.currentUser && this.props.toy &&
+			this.props.currentUser.id === this.props.toy.owner_id ?
+			<Link className="toy-edit-btn"
+				to={`/toys/${this.props.match.params.toyId}/edit`}>
+				Edit Your Post
+			</Link>
+			: "";
+
 		return (
 			<div className="toy-index-body">
-				<Link
-					className="project-title"
-					to={`/toys`}>
-					Back Button
-				</Link>
 				<div className="toy-show-container">
-					<h1 className="feature-header">Lease Toy</h1>
+					<h1 className="feature-header lease-header">Lease Toy</h1>
 						<div className="toy-show">
 							<div className="toy-show-card">
 								<Image publicId={toy.image_url} cloudName="dwuiaymbx" >
@@ -39,12 +43,9 @@ class ToyShow extends React.Component {
 		              <p>Toy type: {toy.toy_type}</p>
 		              <p>Created at: {toy.created_at}</p>
 								</div>
-								<Link className="toy-show-edit-btn"
-									to={`/toys/${this.props.match.params.toyId}/edit`}>
-									Edit
-								</Link>
-								<LeasingFormContainer toy={toy}/>
+								{edit}
 	    				</div>
+							<LeasingFormContainer toy={toy}/>
 					</div>
 				</div>
 			</div>

@@ -1,16 +1,18 @@
 import { connect } from 'react-redux';
-import { fetchToy } from '../../actions/toy_actions';
+import { fetchToy, deleteToy } from '../../actions/toy_actions';
 import ToyShow from './toys_show';
 
 const mapStateToProps = (state, ownProps) => {
 	const toy = state.entities.toys[ownProps.match.params.toyId];
 	return {
-		toy
+		toy,
+		currentUser: state.session.currentUser
 	};
 };
 
 const mapDispatchToProps = dispatch => ({
-	fetchToy: id => dispatch(fetchToy(id))
+	fetchToy: id => dispatch(fetchToy(id)),
+	deleteToy: id => dispatch(deleteToy(id))
 });
 
 export default connect(

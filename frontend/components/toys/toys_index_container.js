@@ -13,6 +13,7 @@ const mapStateToProps = (state, ownProps) => {
 	return {
 		toys: Object.keys(state.entities.toys)
 		.map(id => state.entities.toys[id]),
+		currentUser: state.session.currentUser
 	};
 };
 
