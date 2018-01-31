@@ -84,33 +84,38 @@ class ToyForm extends React.Component {
     : "Edit your toy";
 
     return(
-      <div>
-        <h1>{formTitle}</h1>
+      <div className="toy-index-container">
+        <h1 className='feature-header'>{formTitle}</h1>
         <form className="form-container" onSubmit={this.handleSubmit}>
           <input required className="toy-title-input" type="text"
             value={title}
             onChange={this.update('title')}
             placeholder="Give your post a title" />
-          <h2>Upload an image of your toy</h2>
+
+          <div className="drop-container">Upload an image of your toy:
           <Dropzone multiple={ false }
                     accept='image/*'
                     onDrop={ this.onDrop }
                     className='toy-image-dropbox'>
             <p>Drag and drop an Image of your toy</p>
           </Dropzone>
-          <p>Your current selected image is: {image_url}</p>
+          <p className="selected-image">Your current selected image is: {image_url}</p>
+          </div>
 
-          <input required className="toy-price-input" type="number"
+
+          <div className="price-container">Set your price:
+            <input required className="toy-price-input" type="number"
             value={price}
             min="1"
             onChange={this.update('price')}
-            placeholder="$" />
+            placeholder="1" />.00
+          </div>
 
-
+          <div>Add Extra Details:
           <textarea className="toy-about-input" type="text"
   					value={about ? about : ''}
-  					onChange={this.update('about')}
-  					placeholder="Add extra details..."/>
+  					onChange={this.update('about')} />
+        </div>
 
           <div>
             <label>What Type of Toy is This?</label>

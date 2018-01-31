@@ -1,18 +1,6 @@
 // Place all the styles related to the api/toys controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.toy-image-dropbox {
-  width: 60%;
-  background-color: #fff;
-  height: 200px;
-  border-style: dashed;
-  border-width: 2px;
-  border-radius: 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .toy-index-container {
   text-align: center;
 }
@@ -71,4 +59,122 @@
   font-size: 1.2em;
   font-weight: bold;
   color: rgb(127,110,194);
+}
+
+// Form Styling Below
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 15%;
+  font-size: 1.3em;
+  text-align: left;
+}
+
+.form-container textarea {
+  margin-bottom: 30px;
+  font-size: 1.3em;
+}
+
+.form-container div {
+  // width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.form-container input {
+  margin-bottom: 30px;
+}
+
+.toy-title-input {
+  // position: absolute;
+
+  font-weight: bold;
+  border-radius: 0.2rem;
+  border: 1px solid #bfbfbf;
+  padding: .6rem;
+  background-color: #fff;
+  color: #283c46;
+  width: 773px;
+}
+
+.drop-container {
+  position: relative;
+}
+
+.toy-image-dropbox {
+  width: 480px;
+  background-color: #fff;
+  height: 200px;
+  border-style: dashed;
+  border-width: 2px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+}
+
+.selected-image {
+  position: absolute;
+  right: 185px;
+  bottom: -30px;
+}
+
+.price-container {
+  margin-top: 60px;
+
+}
+
+.toy-price-input {
+  // position: absolute;
+  font-size: 1.3em;
+  font-weight: bold;
+  border-radius: 0.2rem;
+  border: 1px solid #bfbfbf;
+  padding: .6rem;
+  background-color: #fff;
+  color: #283c46;
+  width: 50px;
+  margin-left: 170px;
+}
+
+.toy-about-input {
+  transition: all 0.2s ease;
+  margin-left: 133px;
+  border-radius: .2em;
+  // padding: 0.75em 0.6em;
+  width: 480px;
+  height: 305px;
+  background-color: #fff;
+  border: 1px solid #bfbfbf;
+  // font-size: .8rem;
+  font-weight: 400;
+  resize: none;
+}
+
+.toy-submit {
+  background-color: rgb(51, 126, 231);
+  color: #fff;
+  width: 175px;
+  font-size: .8em;
+  font-weight: bold;
+  text-align: center;
+  padding: .9em .9em .9em .9em;
+  border-radius: 0.2em;
+  border: 1px solid #bfbfbf;
+  border-bottom-width: 2px;
+  border-color: rgba(0,0,0,0.15);
+  transition: all 0.2s ease;
+  align-self: flex-start;
+  margin-top: 30px;
+
+  margin-left: 300px;
+  box-sizing: border-box;
+}
+
+select {
+  margin-left: 60px;
+  font-size: 1.1em;
 }
