@@ -19,6 +19,9 @@ class ToyShow extends React.Component {
       created_at: ""
     };
 
+		const createdDate = new Date(toy.created_at);
+			createdDate.setDate(createdDate.getDate() + 1);
+
 		const edit = this.props.currentUser && this.props.toy &&
 			this.props.currentUser.id === this.props.toy.owner_id ?
 			<Link className="toy-edit-btn"
@@ -41,7 +44,7 @@ class ToyShow extends React.Component {
 		  						<p>Description: {toy.about}</p>
 		              <p>Price per day: ${toy.price}.00</p>
 		              <p>Toy type: {toy.toy_type}</p>
-		              <p>Created at: {toy.created_at}</p>
+		              <p>Created on: {(createdDate.getMonth() + 1) + "/" + createdDate.getDate()  + "/" + createdDate.getFullYear()}</p>
 								</div>
 								{edit}
 	    				</div>

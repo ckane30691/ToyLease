@@ -1,6 +1,8 @@
 // Place all the styles related to the api/toys controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Index Styling
 .toy-index-container {
   text-align: center;
 }
@@ -59,6 +61,11 @@
   font-size: 1.2em;
   font-weight: bold;
   color: rgb(127,110,194);
+}
+
+.toy-delete-btn {
+  color: red;
+  text-decoration: underline;
 }
 
 // Form Styling Below
@@ -207,7 +214,8 @@ select {
   border: 1px solid #bfbfbf;
   border-bottom-width: 2px;
   border-color: rgba(0,0,0,0.15);
-  // position: relative;
+  position: relative;
+  margin-bottom: 80px;
 }
 
 .toy-show h3 {
@@ -230,4 +238,21 @@ select {
 .toy-description p {
   color: #6d6d6d;
 
+}
+
+.toy-edit-btn {
+  position: absolute;
+  bottom: -60px;
+  margin-left: -25px;
+  background-color: rgb(51, 126, 231);
+ 	color: #fff;
+  text-align: center;
+  height: 20px;
+ 	font-size: .78em;
+ 	font-weight: bold;
+ 	padding: 0.75em 0.75em 0.75em 0.75em;
+ 	border-radius: 0.2em;
+ 	border: 1px solid #bfbfbf;
+ 	border-bottom-width: 2px;
+ 	border-color: rgba(0,0,0,0.15);
 }
