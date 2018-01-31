@@ -2,5 +2,5 @@ json.extract! leasing, :id, :start_date, :end_date, :lease_duration, :total_cost
 
 toy = leasing.toy
 json.toy do
-  json.extract! :id, :title, :price, :image_url
+  json.extract! toy, :id, :title, :price, :image_url
 end

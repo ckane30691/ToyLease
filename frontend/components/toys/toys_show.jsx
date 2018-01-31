@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Image, Transformation } from 'cloudinary-react';
+import LeasingFormContainer from '../leasings/leasing_form_container'
 
 class ToyShow extends React.Component {
 
@@ -42,6 +43,7 @@ class ToyShow extends React.Component {
 									to={`/toys/${this.props.match.params.toyId}/edit`}>
 									Edit
 								</Link>
+								<LeasingFormContainer toy={toy}/>
 	    				</div>
 					</div>
 				</div>

@@ -14,10 +14,10 @@
 class Leasing < ApplicationRecord
   validates :start_date, :end_date, :toy_id, :leaser_id, presence: true
   validate :start_date_before_end_date
-  validate :after_current_date
+  validate :after_today
   validate :ensure_no_overlapping_leases
 
-  belongs_to :toys,
+  belongs_to :toy,
             primary_key: :id,
             foreign_key: :toy_id,
             class_name: :Toy
