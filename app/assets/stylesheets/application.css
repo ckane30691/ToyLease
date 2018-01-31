@@ -129,6 +129,41 @@ span {
   transition: all 0.2s ease;
 }
 
+.header-group {
+   font-size: .85em;
+   position: relative;
+   display: flex;
+   margin-right: 100px;
+}
+
+.header-group a {
+  align-self: center;
+  margin-right: 35px;
+  text-decoration: underline;
+}
+
+.header-name {
+  align-self: center;
+}
+
+.header-button {
+ background-color: rgb(51, 126, 231);
+ color: #fff;
+ width: 60px;
+ font-size: .7em;
+ font-weight: bold;
+ text-align: center;
+ padding: 0.50em .5em 0.50em .5em;
+ border-radius: 0.2em;
+ border: 1px solid #bfbfbf;
+ border-bottom-width: 2px;
+ border-color: rgba(0,0,0,0.15);
+ transition: all 0.2s ease;
+ position: absolute;
+ right: -90px;
+ top:-5px;
+}
+
 .home-container {
  display: flex;
  align-items: center;

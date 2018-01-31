@@ -8,11 +8,11 @@ const ToyIndexItem = ({ toy }) => {
     <Link to={`/toys/${toy.id}`}>
       <div className='toy-index-item'>
         <Image publicId={toy.image_url} cloudName="dwuiaymbx" >
-          <Transformation height="275" width="350" crop="scale" />
+          <Transformation height="200" width="200" crop="scale" />
         </Image>
-        <ul>
+        <ul className="toy-attributes">
           <li>{toy.title}</li>
-          <li>${toy.price} per night</li>
+          <li>${toy.price}.00 per night</li>
           <li>{toy.toy_type}</li>
         </ul>
       </div>

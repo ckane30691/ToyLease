@@ -11,6 +11,8 @@ const sessionLinks = (dummyLogin) => (
 
 const personalGreeting = (currentUser, logout) => (
 	<hgroup className="header-group">
+		<Link to="/toys/new">Post a new Toy!</Link>
+		<Link to="leasings">Leasings</Link>
 		<h2 className="header-name">Welcome Back,&nbsp; {currentUser.username}</h2>
 		<button className="header-button" onClick={logout}>Log Out</button>
 	</hgroup>

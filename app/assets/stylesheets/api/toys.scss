@@ -12,3 +12,63 @@
   align-items: center;
   justify-content: center;
 }
+
+.toy-index-container {
+  text-align: center;
+}
+
+.feature-header {
+  font-size: 3em;
+  font-weight: bold;
+  color: rgb(238, 101, 100);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.toy-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.toy-index-card {
+  background-color: white;
+  width: 350px;
+  height: 350px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: .3em;
+  text-align: center;
+  border: 1px solid #bfbfbf;
+  border-bottom-width: 2px;
+  border-color: rgba(0,0,0,0.15);
+  margin-bottom: 25px;
+}
+
+.toy-index-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.toy-index-item img {
+  width: 300px;
+  height: 240px;
+}
+
+.toy-attributes {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #283c46;
+}
+
+.toy-attributes :first-child {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: rgb(127,110,194);
+}

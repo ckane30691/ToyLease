@@ -10,17 +10,19 @@ class ToyIndex extends React.Component {
   render() {
     return (
 			<div className="toy-index-body">
-				<div className="generic-index-container">
+				<div className="toy-index-container">
 					<h2 className="feature-header">Available Toys</h2>
 
 					<ul className='toy-list'>
 						{
 							this.props.toys.map(toy => (
-							<ToyIndexItem
-								key={toy.id}
-								deleteToy={this.props.deleteToy}
-								updateToy={this.props.updateToy}
-								toy={toy}	/>
+              <div key={toy.id} className='toy-index-card'>
+  							<ToyIndexItem
+  								
+  								deleteToy={this.props.deleteToy}
+  								updateToy={this.props.updateToy}
+  								toy={toy}	/>
+              </div>
 							))
 						}
 					</ul>
