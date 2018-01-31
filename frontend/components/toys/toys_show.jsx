@@ -25,24 +25,28 @@ class ToyShow extends React.Component {
 					Back Button
 				</Link>
 				<div className="toy-show-container">
-					Examine Toy
+					<h1 className="feature-header">Lease Toy</h1>
 						<div className="toy-show">
-  						<h3>{toy.title}</h3>
-  						<p>{toy.about}</p>
-              <Image publicId={toy.image_url} cloudName="dwuiaymbx" >
-                <Transformation height="275" width="350" crop="scale" />
-              </Image>
-              <p>${toy.price}.00</p>
-              <p>{toy.toy_type}</p>
-              <p>{toy.created_at}</p>
-    				</div>
-					<Link className="toy-show-edit-btn"
-						to={`/toys/${this.props.match.params.toyId}/edit`}>
-						Edit
-					</Link>
+							<div className="toy-show-card">
+								<Image publicId={toy.image_url} cloudName="dwuiaymbx" >
+									<Transformation height="275" width="350" crop="scale" />
+								</Image>
+								<div className="toy-description">
+		  						<h3>{toy.title}</h3>
+		  						<p>Description: {toy.about}</p>
+		              <p>Price per day: ${toy.price}.00</p>
+		              <p>Toy type: {toy.toy_type}</p>
+		              <p>Created at: {toy.created_at}</p>
+								</div>
+								<Link className="toy-show-edit-btn"
+									to={`/toys/${this.props.match.params.toyId}/edit`}>
+									Edit
+								</Link>
+	    				</div>
+					</div>
 				</div>
 			</div>
-		)
+		);
 	}
 
 }
