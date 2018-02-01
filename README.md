@@ -1,4 +1,4 @@
-![splash page](https://s3.amazonaws.com/toy-lease/Screen+Shot+2018-01-31+at+8.31.28+PM.png)
+![splash page](https://s3.amazonaws.com/toy-lease/splash.png)
 # ToyLease
 
 Everyone has toys that are too sentimental to sell but so old and dated you don't use them anymore.  Instead of letting those old toys collect dust, make some money from them by letting others rent them via [ToyLease](https://toylease.herokuapp.com/#/).  ToyLease gives other people a chance to experience the magic of your preloved toys and you get to make a quick buck.  It's a win-win really.  
