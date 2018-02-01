@@ -74,14 +74,14 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-left: 15%;
-  font-size: 1.3em;
+  padding-left: 18%;
+  font-size: 1.2em;
   text-align: left;
 }
 
 .form-container textarea {
   margin-bottom: 30px;
-  font-size: 1.3em;
+  font-size: 1.1em;
 }
 
 .form-container div {
@@ -95,19 +95,19 @@
 }
 
 .toy-title-input {
-  // position: absolute;
-
   font-weight: bold;
   border-radius: 0.2rem;
   border: 1px solid #bfbfbf;
   padding: .6rem;
   background-color: #fff;
   color: #283c46;
-  width: 773px;
+  width: 755px;
 }
 
 .drop-container {
   position: relative;
+  flex-wrap: wrap;
+
 }
 
 .toy-image-dropbox {
@@ -121,12 +121,15 @@
   align-items: center;
   justify-content: center;
   margin-left: 30px;
+  margin-right: 400px;
 }
 
 .selected-image {
-  position: absolute;
-  right: 185px;
-  bottom: -30px;
+  margin-top: 20px;
+  margin-right: 300px;
+  // position: absolute;
+  // right: 185px;
+  // bottom: -30px;
 }
 
 .price-container {
@@ -136,7 +139,7 @@
 
 .toy-price-input {
   // position: absolute;
-  font-size: 1.3em;
+  font-size: 1.1em;
   font-weight: bold;
   border-radius: 0.2rem;
   border: 1px solid #bfbfbf;
@@ -144,7 +147,7 @@
   background-color: #fff;
   color: #283c46;
   width: 50px;
-  margin-left: 170px;
+  margin-left: 165px;
 }
 
 .toy-about-input {
@@ -177,12 +180,12 @@
   align-self: flex-start;
   margin-top: 30px;
 
-  margin-left: 300px;
+  margin-left: 290px;
   box-sizing: border-box;
 }
 
 select {
-  margin-left: 60px;
+  margin-left: 67px;
   font-size: 1.1em;
 }
 
@@ -237,7 +240,13 @@ select {
 
 .toy-description p {
   color: #6d6d6d;
+  margin-bottom: 10px;
+}
 
+.show-span {
+  color: #283c46;
+  font-weight: bold;
+  font-size: 1.1em;
 }
 
 .toy-edit-btn {

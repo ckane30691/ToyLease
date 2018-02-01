@@ -41,10 +41,14 @@ class ToyShow extends React.Component {
 								</Image>
 								<div className="toy-description">
 		  						<h3>{toy.title}</h3>
-		  						<p>Description: {toy.about}</p>
-		              <p>Price per day: ${toy.price}.00</p>
-		              <p>Toy type: {toy.toy_type}</p>
-		              <p>Created on: {(createdDate.getMonth() + 1) + "/" + createdDate.getDate()  + "/" + createdDate.getFullYear()}</p>
+		  						<p><span className="show-span">Description:</span> {toy.about}</p>
+		              <p><span className="show-span">Price per day:</span> ${toy.price}.00</p>
+		              <p><span className="show-span">Toy type:</span> {toy.toy_type}</p>
+		              <p><span className="show-span">Created on:&nbsp;</span>
+										{(createdDate.getMonth() + 1) + "/"
+											+ createdDate.getDate()  + "/"
+											+ createdDate.getFullYear()}
+									</p>
 								</div>
 								{edit}
 	    				</div>

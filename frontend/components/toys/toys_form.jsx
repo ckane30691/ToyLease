@@ -99,7 +99,7 @@ class ToyForm extends React.Component {
                     className='toy-image-dropbox'>
             <p>Drag and drop an Image of your toy</p>
           </Dropzone>
-          <p className="selected-image">Your current selected image is: {image_url}</p>
+          <div className="selected-image">Your current selected image is: </div><div>{image_url}</div>
           </div>
 
 

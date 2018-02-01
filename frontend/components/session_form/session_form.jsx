@@ -16,13 +16,13 @@ class SessionForm extends React.Component {
   }
 
   componentDidMount() {
-    // this.props.receiveCurrentUser(null);
+    this.props.receiveCurrentUser(null);
   }
 
 
   componentWillReceiveProps(newProps) {
     if (newProps.formType !== this.props.formType) {
-      // this.props.receiveCurrentUser(null);
+      this.props.receiveCurrentUser(null);
     }
   }
 
@@ -44,7 +44,7 @@ class SessionForm extends React.Component {
 
   renderErrors() {
     return (
-      <ul>
+      <ul className="errors">
         {this.props.errors.map((error, idx) => (
           <li key={`error-${idx}`}>
             {error}
@@ -55,7 +55,6 @@ class SessionForm extends React.Component {
   }
 
   render() {
-   //Possibly refactor this
    let text = this.props.formType === 'login' ? 'Log In' : 'Sign Up'
    let passage = this.props.formType === 'login' ?
      <p>
