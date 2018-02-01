@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import {
 	createLeasing,
 } from '../../actions/leasing_actions';
+import { clearErrors } from '../../actions/error_actions';
 import LeasingForm from './leasing_form';
 import { withRouter } from 'react-router-dom';
 
@@ -21,6 +22,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
 	return {
 		createLeasing: leasing => dispatch(createLeasing(leasing)),
+		clearErrors: () => dispatch(clearErrors())
 	};
 };
 

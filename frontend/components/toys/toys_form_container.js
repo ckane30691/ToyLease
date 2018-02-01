@@ -6,6 +6,8 @@ import {
 } from '../../actions/toy_actions';
 import ToyForm from './toys_form';
 import { withRouter } from 'react-router-dom';
+import { clearErrors } from '../../actions/error_actions';
+
 
 const mapStateToProps = (state, ownProps) => {
 	let toy = {
@@ -33,6 +35,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 	return {
 		processForm: toy => dispatch(processForm(toy)),
 		fetchToy: id => dispatch(fetchToy(id)),
+		clearErrors: () => dispatch(clearErrors()),
     formType
 	};
 };

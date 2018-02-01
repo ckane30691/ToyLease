@@ -17,6 +17,10 @@ class LeasingForm extends React.Component {
     };
   }
 
+  componentWillUnmount() {
+    this.props.clearErrors();
+  }
+
 
   handleSubmit(e) {
     e.preventDefault();
@@ -29,6 +33,18 @@ class LeasingForm extends React.Component {
       });
     }
   );
+  }
+
+  renderErrors() {
+    return (
+      <ul className="leasing-errors">
+        {this.props.errors.map((error, idx) => (
+          <li key={`error-${idx}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
   }
 
   render() {
@@ -62,6 +78,7 @@ class LeasingForm extends React.Component {
               onChange={this.update('end_date')}/>
 
           </div>
+          {this.renderErrors()}
           <input className='leasing-submit'
                  type='submit'
                  value='Submit'/>

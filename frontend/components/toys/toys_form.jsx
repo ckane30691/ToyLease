@@ -26,6 +26,10 @@ class ToyForm extends React.Component {
 		this.setState(newProps.toy);
 	}
 
+  componentWillUnmount() {
+    this.props.clearErrors();
+  }
+
   update(field) {
 		return e => this.setState({[field]: e.target.value});
 	}

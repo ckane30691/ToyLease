@@ -64,7 +64,7 @@
   border-bottom-width: 2px;
   border-color: rgba(0,0,0,0.15);
   position: relative;
-  height: 250px;
+  height: 300px;
 }
 
 .leasing-form-card h1 {
@@ -100,4 +100,11 @@
  	border-color: rgba(0,0,0,0.15);
   position: absolute;
   bottom: 20px;
+}
+
+.leasing-errors {
+  color: red;
+  text-align: center;
+  margin-top: 20px;
+
 }
