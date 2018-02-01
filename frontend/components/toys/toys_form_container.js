@@ -19,7 +19,8 @@ const mapStateToProps = (state, ownProps) => {
 		toy = state.entities.toys[ownProps.match.params.toyId];
 	}
 	return {
-		toy
+		toy,
+		errors: state.errors.toy
 	};
 };
 

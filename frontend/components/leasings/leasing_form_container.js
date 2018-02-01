@@ -13,7 +13,8 @@ const mapStateToProps = (state, ownProps) => {
   };
 
 	return {
-		leasing
+		leasing,
+		errors: state.errors.leasing
 	};
 };
 

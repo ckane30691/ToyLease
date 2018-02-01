@@ -72,6 +72,18 @@ class ToyForm extends React.Component {
     });
   }
 
+  renderErrors() {
+    return (
+      <ul className="toy-errors">
+        {this.props.errors.map((error, idx) => (
+          <li key={`error-${idx}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
   render() {
     const title = this.props.toy ? this.state.title : '';
     const about = this.props.toy ? this.state.about : '';
@@ -132,7 +144,7 @@ class ToyForm extends React.Component {
 
 
 
-
+          {this.renderErrors()}
           <input className="toy-submit" type="submit" value="Post toy!" />
 
         </form>
