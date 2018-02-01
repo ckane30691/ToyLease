@@ -42,7 +42,7 @@ If you find a bug, please open an issue [here](https://github.com/ckane30691/Toy
 * [Coudinary API](https://cloudinary.com/) - Cloud service for uploading images
 * [AWS S3 Buckets](https://aws.amazon.com/s3/) - Cloud Service for serving images
 
-## Future Directions for Basechamp
+## Future Directions for ToyLease
 * Implement Email Messaging
 * Implement Reviews
 * Implement User Profiles
