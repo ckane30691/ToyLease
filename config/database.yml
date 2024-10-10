@@ -80,6 +80,8 @@ test:
 #
 production:
   <<: *default
-  database: ToyLease_production
-  username: ToyLease
+  url: <%= ENV['DATABASE_URL'] %>
+  database: <%= ENV['DATABASE_NAME'] %>
+  username: <%= ENV['DATABASE_USERNAME'] %>
   password: <%= ENV['TOYLEASE_DATABASE_PASSWORD'] %>
+  schema_search_path: 'toylease,public'

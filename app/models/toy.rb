@@ -14,6 +14,8 @@
 #
 
 class Toy < ApplicationRecord
+  self.table_name = 'toylease.toys'
+  
   validates :owner_id, :title, :image_url, :title, presence: true
   validates_uniqueness_of :title, scope: [:owner_id]
   validates :toy_type, inclusion: {

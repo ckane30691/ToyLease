@@ -12,6 +12,8 @@
 #
 
 class Leasing < ApplicationRecord
+  self.table_name = 'toylease.leasings'
+  
   validates :start_date, :end_date, :toy_id, :leaser_id, presence: true
   validate :start_date_before_end_date
   validate :after_today

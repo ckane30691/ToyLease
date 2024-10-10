@@ -11,6 +11,8 @@
 #
 
 class User < ApplicationRecord
+  self.table_name = 'toylease.users'
+  
   attr_reader :password
 
   validates :password, length: { minimum: 6, allow_nil: true }

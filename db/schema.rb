@@ -10,41 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180131025800) do
+ActiveRecord::Schema.define(version: 20241010190701) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "leasings", force: :cascade do |t|
-    t.date "start_date", null: false
-    t.date "end_date", null: false
-    t.integer "toy_id", null: false
-    t.integer "leaser_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "toys", force: :cascade do |t|
-    t.integer "owner_id", null: false
-    t.string "title", null: false
-    t.string "image_url", null: false
-    t.integer "price", null: false
-    t.string "toy_type", null: false
-    t.text "about"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["owner_id"], name: "index_toys_on_owner_id"
-    t.index ["title"], name: "index_toys_on_title"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "username", null: false
-    t.string "password_digest", null: false
-    t.string "session_token", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["session_token"], name: "index_users_on_session_token", unique: true
-    t.index ["username"], name: "index_users_on_username", unique: true
-  end
 
 end
