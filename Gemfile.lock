@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/codahale/bcrypt-ruby.git
+  revision: 0bd60aa6507bfc6a7b8f5dde9196ad93fb4f94a6
+  specs:
+    bcrypt (3.1.20)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -45,7 +51,6 @@ GEM
       rake (>= 10.4, < 14.0)
     arel (8.0.0)
     base64 (0.2.0)
-    bcrypt (3.1.20)
     better_errors (2.10.1)
       erubi (>= 1.0.0)
       rack (>= 0.9.0)
@@ -77,7 +82,7 @@ GEM
     digest (3.1.1)
     erubi (1.13.0)
     execjs (2.9.1)
-    ffi (1.17.0-x86_64-darwin)
+    ffi (1.17.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
     i18n (1.14.6)
@@ -104,6 +109,7 @@ GEM
       net-smtp
     method_source (1.1.0)
     mini_mime (1.1.2)
+    mini_portile2 (2.6.1)
     minitest (5.15.0)
     net-imap (0.2.2)
       digest
@@ -119,7 +125,8 @@ GEM
       net-protocol
       timeout
     nio4r (2.7.3)
-    nokogiri (1.12.5-x86_64-darwin)
+    nokogiri (1.12.5)
+      mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
     pg (0.21.0)
     pry (0.14.2)
@@ -215,7 +222,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
-  bcrypt
+  bcrypt!
   better_errors
   binding_of_caller
   byebug
