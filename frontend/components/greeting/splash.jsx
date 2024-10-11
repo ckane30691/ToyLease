@@ -5,7 +5,7 @@ const Splash = () => (
   <div className='splash'>
 		<div className="hero-img-container">
       <img className="hero-img" alt="hero image"
-        src="https://s3.amazonaws.com/toy-lease/mly.jpg"/>
+        src="/assets/mly-4056ac8ec8a8f4c3c95fcdedb7527c93848b59b39679f93d8dc758e10b4005bd.jpg"/>
     </div>
 
     <div className="intro-container">

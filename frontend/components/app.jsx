@@ -22,7 +22,7 @@ const App = () => (
   <div>
     <header>
       <div className="home-container">
-        <img className="icon" src="https://s3.amazonaws.com/toy-lease/lego-cube-or-square.png"/>
+        <img className="icon" src="/assets/lego-1-10d38558d782302d89df37494efda43c7fd2bb379ad588bb64b7a110727b5b6b.svg"/>
         <Link to='/' className="header-link"><h1>ToyLease</h1></Link>
       </div>
 
